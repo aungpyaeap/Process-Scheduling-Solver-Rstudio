@@ -9,7 +9,7 @@ R codes for classic CPU scheduling algorithms to compute Turnaround Time (TT) an
 - Round-Robin / RR
 
 ## Equations
-$$\text{Start Time with different arrival time}=\max\{\underbrace{ST + EXT}_{\text{previous}(i-1)} , \underbrace{AT}_{\text{current}(i)}\}$$
+$\text{Start Time with different arrival time}=\max(\underbrace{ST + EXT}_{\text{previous}(i-1)} , \underbrace{AT}_{\text{current}(i)})$
 
 $\text{Completion Time}=\text{Start Time}+\text{Execution Time}$
 

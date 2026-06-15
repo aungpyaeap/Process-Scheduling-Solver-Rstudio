@@ -9,7 +9,7 @@ R codes for classic CPU scheduling algorithms to compute Turnaround Time (TT) an
 - Round-Robin / RR
 
 ## Equations
-$\text{Start Time with different arrival time}=\max\{\underbrace{ST + EXT}_{\text{previous}(i-1)} , \underbrace{AT}_{\text{current}(i)}\}$
+$$\text{Start Time with different arrival time}=\max\{\underbrace{ST + EXT}_{\text{previous}(i-1)} , \underbrace{AT}_{\text{current}(i)}\}$$
 
 $\text{Completion Time}=\text{Start Time}+\text{Execution Time}$
 
@@ -31,3 +31,4 @@ $\text{Average Waiting Time} \quad WT = \frac{1}{n} \sum_{i=1}^n WT_i, \quad i=1
 $\text{Average Turnaround Time} \quad TT = \frac{1}{n} \sum_{i=1}^n TT_i, \quad i=1,2,\cdots,n$
 
 
+![Visualisation of process scheduling](scheduling.png "Visualisation of process scheduling)

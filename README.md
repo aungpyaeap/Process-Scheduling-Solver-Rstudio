@@ -1,6 +1,6 @@
-# Process Scheduling Solver (Rstudio)
+# Process Scheduling Solver
 
-R codes for classic CPU scheduling algorithms to compute Turnaround Time (TT) and Waiting Time (WT).
+Pyton and R codes for classic CPU scheduling algorithms to compute Turnaround Time (TT) and Waiting Time (WT).
 
 ## Algorithms in repository
 - First Come First Serve / FCFS

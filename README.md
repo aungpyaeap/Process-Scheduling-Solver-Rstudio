@@ -2,15 +2,15 @@
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge)
 
-Pyton and R code for classic CPU scheduling algorithms to compute Average Waiting Time (WT) and Average Turnaround Time (TT).
+Pyton code for classic CPU scheduling algorithms to compute Average Waiting Time (WT) and Average Turnaround Time (TT).
 
 ## Algorithms in repository
-- **`FCFS.R`** **`FCFS.py`**: First Come First Serve / FCFS
-- **`SJF.R`** **`SJF.py`**: Shortest Job First / SJF (non-preemptive)
-- **`PREEMPTIVE-PRIORITY.R.R`** **`PP.py`**: Preemptive Priority
-- **`ROUND-ROBIN.R`** **`RR.py`**: Round-Robin / RR
+- **`FCFS.py`**: First Come First Serve / FCFS
+- **`SJF.py`**: Shortest Job First / SJF (non-preemptive)
+- **`PP.py`**: Preemptive Priority
+- **`RR.py`**: Round-Robin / RR
 
-The Python implementations require the following packages:
+The implementations require the following packages:
 - `numpy` - for numerical operations
 - `tabulate` - for formatted table output
 

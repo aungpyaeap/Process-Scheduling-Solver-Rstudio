@@ -7,8 +7,13 @@ BURST = np.array([15, 2, 6, 2, 10])
 # Number of processes
 n = len(ARRIVALS)
 
+# Sort processes by arrival time
+process_indices = np.argsort(ARRIVALS)
+sorted_arrivals = ARRIVALS[process_indices]
+sorted_burst = BURST[process_indices]
+sorted_processes = [f'P{i+1}' for i in process_indices]
+
 # Initialize arrays for results
-PROCESSES = [f'P{i+1}' for i in range(n)]
 START_TIME = np.zeros(n, dtype=int)
 COMPLETION_TIME = np.zeros(n, dtype=int)
 WAITING_TIME = np.zeros(n, dtype=int)
@@ -19,16 +24,16 @@ current_time = 0
 
 for i in range(n):
     # Start time is max of current time and arrival time
-    START_TIME[i] = max(current_time, ARRIVALS[i])
+    START_TIME[i] = max(current_time, sorted_arrivals[i])
     
     # Completion time = start time + burst time
-    COMPLETION_TIME[i] = START_TIME[i] + BURST[i]
+    COMPLETION_TIME[i] = START_TIME[i] + sorted_burst[i]
     
     # Turnaround time = completion time - arrival time
-    TURNAROUND_TIME[i] = COMPLETION_TIME[i] - ARRIVALS[i]
+    TURNAROUND_TIME[i] = COMPLETION_TIME[i] - sorted_arrivals[i]
     
     # Waiting time = turnaround time - burst time
-    WAITING_TIME[i] = TURNAROUND_TIME[i] - BURST[i]
+    WAITING_TIME[i] = TURNAROUND_TIME[i] - sorted_burst[i]
     
     # Update current time to completion time
     current_time = COMPLETION_TIME[i]
@@ -37,9 +42,9 @@ for i in range(n):
 RESULTS = []
 for i in range(n):
     RESULTS.append([
-        PROCESSES[i],
-        ARRIVALS[i],
-        BURST[i],
+        sorted_processes[i],
+        sorted_arrivals[i],
+        sorted_burst[i],
         START_TIME[i],
         COMPLETION_TIME[i],
         WAITING_TIME[i],
